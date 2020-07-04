@@ -63,7 +63,7 @@ namespace ZipApi.Controllers
         }
 
         // DELETE: api/Users/1
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<ActionResult<User>> DeleteUser(long id)
         {
             var user = await _context.Users.FindAsync(id);
